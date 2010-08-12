@@ -2,9 +2,8 @@ package HTTP::Response::Parser;
 
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
-use Carp;
 use base qw(Exporter);
 
 our %EXPORT_TAGS = (
@@ -31,11 +30,12 @@ sub parse {
     my $res = {};
     my $parsed = parse_http_response( $_[0], $res );
     if ($parsed == -1) {
-        carp "invalid response";
+        warnings::warnif misc =>  "invalid response";
         return;
     }
     if ($parsed == -2) {
-        carp "warning: successfully parsed. but HTTP header is maybe incomplete.";
+        warnings::warnif
+            misc => "warning: successfully parsed, but HTTP headers may be incomplete.";
     } 
     
     if ( defined $_[1] ) {

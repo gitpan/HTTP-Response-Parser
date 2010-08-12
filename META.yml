@@ -3,9 +3,13 @@ abstract: 'create HTTP::Response object fast way'
 author:
   - 'mala <cpan@ma.la>'
 build_requires:
+  Devel::PPPort: 3.19
   ExtUtils::MakeMaker: 6.42
+  ExtUtils::ParseXS: 2.21
+  HTTP::Response: 0
   Test::More: 0
 configure_requires:
+  Devel::PPPort: 3.19
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
 generated_by: 'Module::Install version 0.91'
@@ -20,8 +24,8 @@ no_index:
     - t
     - xt
 requires:
-  Filter::Util::Call: 0
+  XSLoader: 0.1
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/mala/HTTP-Response-Parser.git
-version: 0.01
+version: 0.02
