@@ -6,7 +6,5 @@ inc
 pm_to_blib
 MANIFEST
 Makefile.old
+Parser.c
 ppport.h
-*.o
-*.out
-*.bak

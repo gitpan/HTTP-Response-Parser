@@ -19,6 +19,7 @@ META.yml
 Parser.xs
 picohttpparser/picohttpparser.c
 picohttpparser/picohttpparser.h
+ppport.h
 README
 t/00_compile.t
 t/01_basic.t
